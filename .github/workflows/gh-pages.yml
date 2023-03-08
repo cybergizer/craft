@@ -1,33 +1,35 @@
-name: Deploy to GitHub pages
+name: Build
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  deploy:
+  test:
+    name: Build and test
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITH: test
+      BRIDGETOWN_ENV: production
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
+      - uses: actions/checkout@master
 
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: "16"
-          cache: "yarn"
-      - run: yarn install
+          cache: yarn
 
-      - name: Build
-        run: bin/bridgetown deploy
+      - name: "Install dependencies with Yarn"
+        run: yarn install
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Set up Ruby 3.2
+        uses: ruby/setup-ruby@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          ruby-version: 3.2
+          bundler-cache: true
+
+      - name: Build webpack assets
+        run: yarn webpack-build
+
+      - name: Test
+        run: yarn test
+        if: success()
