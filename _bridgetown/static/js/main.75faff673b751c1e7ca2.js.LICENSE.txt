@@ -1,0 +1,11 @@
+/*!
+  * PhotoSwipe Lightbox 5.3.6 - https://photoswipe.com
+  * (c) 2023 Dmytro Semenov
+  */
+
+/*!
+ * clipboard.js v2.0.11
+ * https://clipboardjs.com/
+ *
+ * Licensed MIT © Zeno Rocha
+ */
