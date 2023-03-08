@@ -18,7 +18,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "bridgetown", "~> 1.1.0"
 
-gem "puma", "~> 5.6"
+gem "puma"
 
 gem "http", "~> 5.0.4"
 gem "countries", "~> 4.2.1"
