@@ -29,5 +29,5 @@ All talks will be live-streamed, recorded, and published.
 **Note:** for sessions with more than one speaker, the travel expenses budget is split among all speakers.
 
 <div style="display: inline-block; text-align: center; width: 100%">
-<a href="https://sessionize.com/euruko-2022/"><img style="max-width: 220px;" src="{% webpack_path images/sessionize-banner-medium.png %}" alt="Speakers powered by Sessionize.com" width="220px" height="80px"></a>
+<a href="https://sessionize.com/euruko-2022/"></a>
 </div>

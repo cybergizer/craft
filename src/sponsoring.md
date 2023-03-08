@@ -65,4 +65,4 @@ Sponsorships can be paid for by SEPA or SWIFT bank transfer. Payment by credit c
 
 ## Contact us
 
-Email [sponsors@euruko.org](mailto:sponsors@euruko.org) to inquire about sponsorships. Download the <a rel="noopener" target="_blank" href="{% link downloads/sponsorship-contract-2022.pdf %}">sponsorship contract</a> for terms and conditions.
+Email [sponsors@euruko.org](mailto:sponsors@euruko.org) to inquire about sponsorships.

@@ -6,8 +6,6 @@ date: 2022-02-08T09:00:00Z
 social_image: /images/social-tickets.png
 ---
 
-{% render "tickets/listing", site: site %}
-
 **⚠️ In-person tickets to Euruko 2022 have sold out as we are at 100% capacity.**
 
 You may be required to wear a mask and/or present proof of vaccination. [Current recommendations and restrictions in Helsinki](https://www.hel.fi/helsinki/coronavirus-en/information/recommendations-and-restrictions-effective).
@@ -19,8 +17,6 @@ Admission is at your own risk. Additional restrictions on entry may be imposed b
 ## Supporters
 
 Euruko is brought to you by our [sponsors](/#sponsors), all attendees, and these fine people who were nice enough to splurge for a supporter ticket.
-
-{% render "tickets/supporters", site: site %}
 
 ## Complimentary tickets
 

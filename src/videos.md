@@ -7,5 +7,3 @@ social_image: /images/social-video.jpg
 ---
 
 The videos are also available through the [Euruko YouTube channel](https://www.youtube.com/euruko).
-
-{% render "videos/listing", site: site %}
