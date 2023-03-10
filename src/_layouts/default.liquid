@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{% if page.lang == blank %}{{ site.metadata.lang }}{% else %}{{ page.lang }}{% endif %}">
+<html prefix="og: http://ogp.me/ns#" lang="{% if page.lang == blank %}{{ site.metadata.lang }}{% else %}{{ page.lang }}{% endif %}">
   <head>
     {% render "head", site: site, metadata: site.metadata, page: page %}
   </head>
