@@ -1,10 +1,12 @@
 <section id="location" class="section section--background">
-  <img
-    class="section__background"
-    src="<%= webpack_path "images/location/history.jpg" %>"
-    alt="alt"
-    loading="lazy"
-  />
+  <picture>
+    <source srcset="<%= webpack_path 'images/location/history-xsm.jpg' %>" media="(max-width: 480px)">
+    <source srcset="<%= webpack_path 'images/location/history-sm.jpg' %>" media="(max-width: 680px)">
+    <source srcset="<%= webpack_path 'images/location/history-md.jpg' %>" media="(max-width: 1080px)">
+    <source srcset="<%= webpack_path 'images/location/history-lg.jpg' %>" media="(max-width: 1920px)">
+    <img src="<%= webpack_path 'images/location/history-xlg.jpg' %>" loading="lazy" alt="Location">
+  </picture>
+
   <div class="section__background-darken-more"></div>
   <div class="section__container">
     <div class="section__inner-container">
@@ -17,8 +19,8 @@
         <div class="section__large-column">
           <div class="section__content" style="color:white">
             <%= markdownify do %>
-              The Compensa Concert Hall in Vilnius is a world-class venue that would make an excellent location for the Euruko. 
-              It's modern and spacious facility offers a range of amenities, including ample space to accommodate more than 1,000 attendees, 
+              The Compensa Concert Hall in Vilnius is a world-class venue that would make an excellent location for the Euruko.
+              It's modern and spacious facility offers a range of amenities, including ample space to accommodate more than 1,000 attendees,
               different rooms and spaces for various purposes, and state-of-the-art technology and top-notch amenities, such as high-speed internet, advanced audiovisual equipment, and modern catering facilities.
             <% end %>
 
