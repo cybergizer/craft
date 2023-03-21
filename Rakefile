@@ -68,7 +68,7 @@ namespace :brella do
         start_time = talk.data.start_time.strftime("%Y-%m-%d %H:%M")
         duration = (talk.data.end_time - talk.data.start_time).to_i / 60
         reservable = talk.data.ics ? "FALSE" : "TRUE"
-        subtitle = talk.relations.speaker ? "By #{talk.relations.speaker.data.name}" : ""
+        subtitle = talk.relations.community ? "By #{talk.relations.community.data.name}" : ""
         csv << [
           "", "", start_time, duration,
           reservable, talk.data.title, subtitle, "", talk.data.summary, ""

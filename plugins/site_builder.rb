@@ -7,8 +7,8 @@ Bridgetown::Resource::PermalinkProcessor.register_placeholder :group, ->(resourc
 end
 
 Bridgetown::Resource::PermalinkProcessor.register_placeholder :speaker_or_slug, ->(resource) do
-  if resource.relations.speaker
-    resource.relations.speaker.data.name
+  if resource.relations.community
+    resource.relations.community.data.name
   else
     resource.data.slug.gsub("_", "-")
   end
