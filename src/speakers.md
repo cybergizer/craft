@@ -41,7 +41,7 @@ Talks should be delivered in **english**.
 
 All talks will be live-streamed, recorded, and published.
 
-All talks and speakers must adhere to the conference → <a href="{{ "/code" | relative_url }}"><b>Code of Conduct</b></a>
+All talks and speakers must adhere to the conference → 
 
 ## Speaker Benefits
 

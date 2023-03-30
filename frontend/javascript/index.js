@@ -30,6 +30,25 @@ window.addEventListener(
   false
 );
 
+function loadPage(url) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((html) => {
+      const parser = new DOMParser();
+      const newDocument = parser.parseFromString(html, "text/html");
+      const newContent = newDocument.querySelector(".content").innerHTML;
+      document.querySelector(".content").innerHTML = newContent;
+    });
+}
+
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    history.pushState({}, "", link.href);
+    loadPage(link.href);
+  });
+});
+
 const initPhotoGallery = () => {
   const gallery = document.getElementById("gallery");
   if (gallery) {

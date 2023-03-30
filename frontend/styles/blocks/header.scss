@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   padding: 0 20px;
-  background: $simply-white;
+  background: inherit;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.25s ease-in-out;
 
@@ -18,14 +18,15 @@
   }
 
   &--not-scrolled {
-    background: $simply-white;
+    background: inherit;
     box-shadow: none;
   }
 
   @include mq.mq($until: largeTablet) {
     &--mobile-toggled {
       height: 500px;
-      background: $simply-white;
+      background: inherit;
+
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     }
   }
@@ -42,6 +43,10 @@
     position: relative;
     width: 150px;
     text-decoration: none;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     &::before,
     &::after {
@@ -61,24 +66,33 @@
       }
 
       .header--not-scrolled & {
-        background: $simply-white;
+        background: inherit;
+        transform: scale(1.1);
       }
 
       .header--mobile-toggled & {
         background: rgba(0, 0, 0, 0.1);
+        transform: scale(1.1);
       }
     }
 
     &::after {
       background: rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
 
       .header--not-scrolled & {
         background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
       }
 
       .header--mobile-toggled & {
         background: rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
       }
+    }
+    &:hover::before {
+      transform: none;
+      opacity: 1;
     }
 
     &:active::after {
@@ -134,13 +148,19 @@
     margin-left: 1.25rem;
     padding-top: 5px;
     padding-bottom: 10px;
-    font-size: 1.25rem;
-    line-height: 1;
-    font-weight: $bold;
+    font-weight: 600;
+    font-size: 29.1146px;
+    line-height: 86.9%;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
     color: #000;
     transition: all 0.15s ease-in-out;
     @media (prefers-reduced-motion: reduce) {
       transition: none;
+    }
+
+    @media (max-width: 1130px) {
+      font-size: 20px;
     }
 
     .header--not-scrolled & {
@@ -269,7 +289,7 @@
   &__navigation {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
   }
 

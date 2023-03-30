@@ -13,5 +13,5 @@ description: >-
   Europe's biggest and oldest Ruby conference | 20th Anniversary
 prefetch:
   - "/"
-  - "/code"
-  - "/sponsoring"
+  # - "/code"
+  # - "/sponsoring"
