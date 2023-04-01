@@ -8,7 +8,7 @@
   pointer-events: none;
 
   &__container {
-    padding: 100px 41px 100px 41px;
+    padding: 100px 40px 100px 40px;
     pointer-events: auto;
 
     @include mq.mq($until: wide) {
@@ -18,11 +18,70 @@
     @include mq.mq($until: tablet) {
       padding: 40px 20px;
     }
+    .bottom-half-ellipse-bg {
+      position: absolute;
+      top: 0;
+      left: 2.5%;
+      width: 95%;
+      height: auto;
+    }
+    .all-ellipse-bg {
+      position: absolute;
+      top: 18%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      @include mq.mq($until: wide) {
+        top: 25%;
+      }
+      @include mq.mq($until: tablet) {
+        display: none;
+      }
+    }
+
+    .all-ellipse-large-bg {
+      position: absolute;
+      top: 17%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      @include mq.mq($until: wide) {
+        top: 15%;
+      }
+      @include mq.mq($until: tablet) {
+        display: none;
+      }
+    }
   }
 
   &__inner-container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 70%;
+
+    @include mq.mq($until: wide) {
+      width: 80%;
+    }
+
+    .grey-text {
+      max-width: 896px;
+      text-align: center;
+      margin-top: 5%;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: -0.04em;
+      color: #838383;
+      background-color: #d9d9d9;
+
+      @include mq.mq($until: wide) {
+        margin-top: 20%;
+      }
+    }
   }
 
   &--blue &__container {
@@ -226,7 +285,207 @@
     }
 
     @include mq.mq($until: tablet) {
-      padding-top: 60px;
+      padding-top: 0px;
+    }
+    .interests-listing {
+      max-width: 1500px;
+      margin-top: 11%;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+
+      .interest-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90.74px;
+        padding: 10px 40px;
+        background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #eaeaea 100%);
+        box-shadow: 3.67404px 2.93923px 11.0221px rgba(0, 0, 0, 0.13);
+        border-radius: 47.0277px;
+        height: auto;
+        @include mq.mq($until: wide) {
+          padding: 5px 20px;
+        }
+
+        .interest {
+          font-weight: 600;
+          font-size: 45.8288px;
+          line-height: 90%;
+          text-align: center;
+          letter-spacing: -0.06em;
+          text-transform: uppercase;
+          height: auto;
+          @include mq.mq($until: tablet) {
+            margin-top: 8%;
+          }
+          @include mq.mq($until: wide) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &-large {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 100px;
+      line-height: 90%;
+      text-align: center;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      background-color: #d9d9d9;
+      margin: 13%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+
+      @include mq.mq($until: wide) {
+        font-size: 60px;
+        margin: 5% auto;
+        width: 70%;
+      }
+
+      @include mq.mq($until: tablet) {
+        font-size: 40px;
+        margin-bottom: 5%;
+        width: 90%;
+      }
+
+      .arrow-to-right {
+        position: absolute;
+        top: 32%;
+        left: -10%;
+        width: 64px;
+        height: 64px;
+
+        @include mq.mq($until: wide) {
+          width: 50px;
+          height: 50px;
+          left: -25%;
+        }
+
+        @include mq.mq($until: tablet) {
+          display: none;
+        }
+      }
+
+      .arrow-to-left {
+        position: absolute;
+        top: 32%;
+        right: -10%;
+        width: 64px;
+        height: 64px;
+
+        @include mq.mq($until: wide) {
+          width: 50px;
+          height: 50px;
+          right: -25%;
+        }
+
+        @include mq.mq($until: tablet) {
+          display: none;
+        }
+      }
+    }
+
+    &-medium {
+      max-width: 507px;
+      margin: 0 auto;
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 90%;
+      text-align: center;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      background-color: #d9d9d9;
+
+      @include mq.mq($until: wide) {
+        font-size: 50px;
+        margin-bottom: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+      }
+
+      @include mq.mq($until: tablet) {
+        font-size: 30px;
+        margin-bottom: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+
+      .arrow-to-bottom {
+        position: absolute;
+        bottom: -44%;
+        left: 44%;
+        width: 64px;
+        height: 64px;
+        z-index: 1;
+        @include mq.mq($until: wide) {
+          display: none;
+        }
+      }
+    }
+
+    .in-row {
+      display: flex;
+      flex-direction: row;
+      gap: 60px;
+      align-items: center;
+      // height: auto;
+      @include mq.mq($until: wide) {
+        gap: 20px;
+      }
+    }
+
+    .black-text {
+      max-width: 896px;
+      text-align: center;
+      margin-top: 8%;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: -0.04em;
+      color: #000000;
+      z-index: 3;
+      background-color: #d9d9d9;
+
+      @include mq.mq($until: tablet) {
+        margin-top: 8%;
+      }
+      @include mq.mq($until: wide) {
+        font-size: 20px;
+        width: 90%;
+        margin-top: 5%;
+      }
+    }
+
+    &-home {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 143.6px;
+      line-height: 90%;
+      text-align: center;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      margin-top: 20%;
+
+      @include mq.mq($until: wide) {
+        font-size: 80px;
+      }
+
+      @include mq.mq($until: tablet) {
+        font-size: 60px;
+      }
     }
   }
 

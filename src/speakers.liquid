@@ -1,0 +1,164 @@
+---
+layout: default
+title: ""
+---
+
+<section id="speakers" class="speakers">
+  <div class="section__container" style="position: relative; z-index: 1;">
+    <img
+      src="{% webpack_path images/speakers/bottom-half.svg %}"
+      class="bottom-half-ellipse-bg"
+      alt="bottom-half">
+    <div class="section__inner-container" style="position: relative; z-index: 2;">
+      <div class="section__single-header">
+        <h1 class="section__single-header-large" style="position: relative; z-index: 1;">
+          <img
+            src="{% webpack_path images/speakers/arrow-to-right.svg %}"
+            alt="arrow-to-right"
+            class="arrow-to-right">
+          The CFP is open from the 1
+          <sup style="font-size: 0.3em; position: relative; top: 0em;">st</sup>
+          of April to the 31
+          <sup style="font-size: 0.3em; position: relative; top: 0em;">st</sup>
+          of May 2023
+          <img
+            src="{% webpack_path images/speakers/arrow-to-left.svg %}"
+            class="arrow-to-left"
+            alt="arrow-to-left">
+        </h1>
+      </div>
+      <p class="grey-text">Euruko is being organized for the past 20 years by Ruby developers for Ruby developers. It’s a truly volunteer-based event and like Ruby it is fostered by the community.  Our attendees enjoy its informal atmosphere and lots of opportunities to listen, to talk, to hack and to have fun.
+      </p>
+    </div>
+    <div class="section__container" style="position: relative; z-index: 2;">
+      <div class="section__single-header" style="position: relative; z-index: 2;">
+        <h1 class="section__single-header-medium">What do we want to hear from you</h1>
+        <p class="black-text">Euruko is being organized for the past 20 years by Ruby developers for Ruby developers. It’s a truly volunteer-based event and like Ruby it is fostered by the community.  Our attendees enjoy its informal atmosphere and lots of opportunities to listen, to talk, to hack and to have fun.
+        </p>
+      </div>
+      <img
+        src="{% webpack_path images/speakers/all-ellipse.svg %}"
+        alt="all-ellipse"
+        class="all-ellipse-bg">
+    </div>
+    <div class="section__container" style="position: relative; z-index: 2;">
+      <div class="section__single-header" style="position: relative; z-index: 2;">
+        <h1
+          class="section__single-header-medium"
+          style="position: relative; z-index: 2;"
+          ">
+          <img
+            src="{% webpack_path images/speakers/arrow-to-bottom.svg %}"
+            alt="arrow-to-bottom"
+            class="arrow-to-bottom">
+          Here are top-list of interests of Euruko’22 attendees
+        </h1>
+        <div class="interests-listing" data-interests-listing>
+          {% for interest in site.data.interests %}
+            <div class="interest-container ">
+              <span class="interest">
+                {{ interest.name }}
+              </span>
+            </div>
+          {% endfor %}
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 26px; margin-top: 5%; margin-left: auto; margin-right: auto; z-index: 3;  background-color: #d9d9d9;">
+          <p style="width: 30%; text-align: center;">Talks should be delivered in english.</p>
+          <img
+            style="width: 5px; height: 49px;"
+            src="{% webpack_path images/speakers/line.svg %}"
+            alt="line">
+          <p style="width: 30%; text-align: center;">Talks are expected to be 30 minutes long, not including a short Q&A section after the talk.
+          </p>
+          <img
+            style="width: 5px; height: 49px;"
+            src="{% webpack_path images/speakers/line.svg %}"
+            alt="line">
+          <p style="width: 30%; text-align: center;">The questions in the Q&A section are screened and moderated.</p>
+        </div>
+      </div>
+      <img
+        src="{% webpack_path images/speakers/all-ellipse-large.svg %}"
+        alt="all-ellipse"
+        class="all-ellipse-large-bg">
+    </div>
+    <div class="section__container" style="position: relative; z-index: 2;">
+      <div class="section__single-header" style="position: relative; z-index: 2;">
+        <h1 class="section__single-header-medium">If your talk is selected</h1>
+        <p class="black-text">You should be prepared to travel to Vilnius in September to give the talk in-person. So, check your calendar to join 20
+          <sup style="font-size: 0.6em; position: relative; top: 0em;">th</sup>
+          Euruko in Vilnius, Lithuania, from 21
+          <sup style="font-size: 0.6em; position: relative; top: 0em;">th</sup>
+          -23
+          <sup style="font-size: 0.6em; position: relative; top: 0em;">th</sup>
+          of September 2023!
+        </p>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 26px; max-width: 1000px;  margin-top: 5%; margin-left: auto; margin-right: auto;  background-color: #d9d9d9;">
+          <p style="width: 30%; text-align: center;">All talks will be live-streamed, recorded, and published.</p>
+          <img
+            style="width: 5px; height: 49px;"
+            src="{% webpack_path images/speakers/line.svg %}"
+            alt="line">
+          <p style="width: 30%; text-align: center;">All talks and speakers must adhere to the conference →
+          </br>
+          <a href="/" style="text-decoration: underline;">Code of Conduct</a>
+        </p>
+
+      </div>
+    </div>
+    <img
+      src="{% webpack_path images/speakers/all-ellipse.svg %}"
+      alt="all-ellipse"
+      class="all-ellipse-bg">
+  </div>
+  <div class="section__container" style="position: relative; z-index: 2;">
+    <div class="section__single-header section__single-row" style="position: relative; z-index: 2;">
+      <h1 class="section__single-header-medium" style="max-width: 300px;">Speaker Benefits</h1>
+      <div class="black-text in-row">
+        <p class="black-text">
+          You should be prepared to travel to Vilnius in September to give the talk in-person. So, check your calendar to join  of September 2023!
+        </p>
+        <img
+          style="width: 10px; height: 140px;"
+          src="{% webpack_path images/speakers/line.svg %}"
+          alt="line">
+        <p class="black-text">
+          Travel and accommodation expenses covered up to a maximum of €500 per session.
+        </p>
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center; gap: 26px; max-width: 1000px;  margin-top: 5%; margin-left: auto; margin-right: auto;  background-color: #d9d9d9;">
+        <p style="width: 50%; text-align: center;">Expenses are primarily reimbursed against receipts after the event, however we can make other arrangements if this is not possible for you.</p>
+      </div>
+    </div>
+    <img
+      src="{% webpack_path images/speakers/all-ellipse.svg %}"
+      alt="all-ellipse"
+      class="all-ellipse-bg">
+  </div>
+  <div class="section__inner-container" style="position: relative; z-index: 2; text-align: center; margin: 1% auto;">
+    <p style="font-weight: 600; font-size: 30px; line-height: 124.9%; text-align: center; color: #737373; background-color: #d9d9d9; width: 100px; margin: 0 auto;">Note</p>
+    <div style="display: flex; align-items: center; padding: 24px 44px; max-width: 465px; background: radial-gradient(50% 50% at 50% 50%, #D7D7D7 0%, #C9C9C9 100%); box-shadow: 3.67404px 2.93923px 11.0221px rgba(0, 0, 0, 0.13); border-radius: 47.0277px; margin: 3% auto;">
+      <span style="font-weight: 400; font-size: 16px; line-height: 120%; text-align: center; color: #5C5C5C;">for sessions with more than one speaker, the travel expenses budget is split among all speakers.</span>
+    </div>
+  </div>
+  <div style="position: absolute; left: 0; right: 0; margin: 0 auto;z-index: 2; width: 100%; margin: 1% auto; height: 100vh; background: #000;">
+    <h1 style="position: absolute; font-weight: 500; font-size: 166.263px; line-height: 88.9%;text-align: center; letter-spacing: -0.06em; text-transform: uppercase;color: #D9D9D9; max-width: 80%; top:50%;left:50%; transform:translate(-50%, -50%);">
+      Ready to rock’n’roll?
+    </h1>
+
+    <a
+      href="https://www.papercall.io/eurukocfp"
+      style="position:absolute;top:80%;left:50%;transform:translate(-50%, -50%); background-color:#13BDAC;padding:14px52px; border-radius:39px; padding: 15px 53px; text-decoration: none;"
+      target="_blank">
+      <span style="font-weight: 600; font-size: 49.2522px; line-height: 88.9%; text-align: center; letter-spacing: -0.06em; text-transform: uppercase; ">
+        apply
+      </span>
+    </a>
+    <img
+      style="height: 85%; margin-top: 4%;"
+      src="{% webpack_path images/speakers/large-ellipse.svg %}"
+      alt="all-ellipse">
+  </div>
+
+</section>

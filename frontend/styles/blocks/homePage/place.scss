@@ -1,0 +1,50 @@
+@use "imports/variables.scss" as *;
+@use "~sass-mq/mq.scss";
+
+.place_section {
+  position: relative;
+  padding-top: $header-height;
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #000;
+  @include mq.mq($until: wide) {
+    height: 100vh;
+  }
+
+  &-header {
+    position: relative;
+
+    margin: 10% auto;
+    font-weight: 600;
+    font-size: 128.385px;
+    line-height: 90%;
+    text-align: center;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    color: #d9d9d9;
+
+    @include mq.mq($until: wide) {
+      font-size: 80px;
+    }
+
+    @include mq.mq($until: tablet) {
+      margin: 0 auto;
+      font-size: 57.223px;
+    }
+  }
+
+  .tower-image {
+    width: 80%;
+    position: absolute;
+    top: 55%;
+    left: 50.3%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  @include mq.mq($until: tablet) {
+    top: 20%;
+  }
+}

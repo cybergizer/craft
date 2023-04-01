@@ -1,0 +1,98 @@
+@use "imports/variables.scss" as *;
+@use "~sass-mq/mq.scss";
+
+.for-speakers_section {
+  // margin-top: $header-height;
+  padding-top: $header-height;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // @include mq.mq($until: tablet) {
+  //   height: 130vh;
+  // }
+  &-header {
+    position: relative;
+    font-weight: 600;
+    font-size: 203.98px;
+    line-height: 88.9%;
+    text-align: center;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+
+    @include mq.mq($until: wide) {
+      font-size: 80px;
+    }
+
+    @include mq.mq($until: tablet) {
+      font-size: 57.223px;
+    }
+
+    .spacer {
+      margin-right: 180px;
+      @include mq.mq($until: wide) {
+        display: none;
+      }
+    }
+
+    .rabbit-image {
+      width: 230px;
+      height: 262px;
+      position: absolute;
+      top: -25%;
+      left: 52%;
+      transform: translateX(-50%);
+
+      @include mq.mq($until: wide) {
+        top: 80%;
+      }
+    }
+  }
+  &-descriptoin {
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 120%;
+    max-width: 1000px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #000000;
+
+    @include mq.mq($until: wide) {
+      top: 80%;
+    }
+
+    @include mq.mq($until: tablet) {
+      font-size: 20px;
+    }
+  }
+  &-button {
+    text-align: center;
+    background: #13bdac;
+    box-shadow: 3.67404px 2.93923px 11.0221px rgba(0, 0, 0, 0.13);
+    border-radius: 47.4324px;
+    width: max-content;
+    padding: 23px 38px;
+
+    & > a {
+      font-weight: 600;
+      font-size: 49.8169px;
+      line-height: 88.9%;
+      text-align: center;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    @include mq.mq($until: wide) {
+      padding: 20px 36px;
+
+      & > a {
+        font-size: 40px;
+      }
+    }
+  }
+}

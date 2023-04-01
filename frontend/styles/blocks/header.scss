@@ -2,15 +2,15 @@
 @use "~sass-mq/mq.scss";
 
 .header {
-  position: fixed;
-  z-index: 10;
+  // position: fixed;
+  z-index: 2;
   width: 100%;
   height: $header-height;
   top: 0;
   left: 0;
-  padding: 0 20px;
-  background: inherit;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  // padding: 0 20px;
+  // background: inherit;
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.25s ease-in-out;
 
   @media (prefers-reduced-motion: reduce) {
@@ -18,16 +18,19 @@
   }
 
   &--not-scrolled {
-    background: inherit;
+    // background: inherit;
     box-shadow: none;
+    @include mq.mq($until: largeTablet) {
+      display: none;
+    }
   }
 
   @include mq.mq($until: largeTablet) {
     &--mobile-toggled {
-      height: 500px;
+      // height: 500px;
       background: inherit;
 
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -36,6 +39,10 @@
     height: $header-height;
     display: flex;
     align-items: center;
+
+    @include mq.mq($until: largeTablet) {
+      display: none;
+    }
   }
 
   &__logo {
@@ -43,7 +50,7 @@
     position: relative;
     width: 150px;
     text-decoration: none;
-
+    // opacity: 0;
     @media (max-width: 767px) {
       display: none;
     }
@@ -145,7 +152,6 @@
   &__link {
     position: relative;
     text-decoration: none;
-    margin-left: 1.25rem;
     padding-top: 5px;
     padding-bottom: 10px;
     font-weight: 600;
@@ -155,6 +161,7 @@
     text-transform: uppercase;
     color: #000;
     transition: all 0.15s ease-in-out;
+    z-index: 5;
     @media (prefers-reduced-motion: reduce) {
       transition: none;
     }
@@ -264,6 +271,7 @@
   &__mobile-toggle {
     position: relative;
     margin-left: auto;
+    margin-right: 20px;
 
     &:focus {
       & > .header__mobile-toggle-inner {
@@ -289,7 +297,7 @@
   &__navigation {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
   }
 
@@ -489,8 +497,9 @@
     &__navigation {
       display: none;
       position: absolute;
-      top: 70px;
-      right: 40px;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       flex-direction: column;
       align-items: flex-end;
       width: auto;
@@ -498,13 +507,19 @@
 
       .header--mobile-toggled & {
         display: flex;
+        align-items: center;
       }
     }
 
     .header__link {
-      font-size: 24px;
+      font-weight: 600;
+      font-size: 34.7605px;
+      line-height: 86.9%;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      color: #b3b3b3;
       margin-left: 0;
-      margin-top: 20px;
+      // margin-top: 20px;
       text-align: right;
 
       &--small {
@@ -527,12 +542,12 @@
 
 @keyframes mobilemenu {
   from {
-    transform: translateX(10px) scale(0.95);
+    // transform: translateX(10px) scale(0.95);
     opacity: 0;
   }
 
   to {
-    transform: none;
+    // transform: none;
     opacity: 1;
   }
 }

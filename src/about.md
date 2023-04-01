@@ -1,9 +1,11 @@
 ---
 layout: page
-title: "About"
-description: The CFP is open from the 1st of April to the 31th of May 2023
-date: 2022-04-28T12:00:00Z
+title: Euruko 2022 videos
+description: The Euruko 2022 recordings
+date: 2022-10-20T08:00:00Z
+social_image: /images/social-video.jpg
 ---
 
+The videos are also available through the [Euruko YouTube channel](https://www.youtube.com/euruko).
 
-
+{% render "videos/listing", site: site %}

@@ -13,15 +13,17 @@
     </button>
     <nav class="header__navigation">
       <a
-        href="{{ "/about" | relative_url }}"
-        style="margin: 0;"
+        id="nav_link"
+        href="/#about"
         class="header__link">about</a>
-      <a href="{{ "/agenda" | relative_url }}" class="header__link">agenda</a>
+
       <a class="header__logo" href="{{ "/" | relative_url }}">
         <img src="{% webpack_path images/animation/small_logo.svg %}" alt="Euruko 2023" />
       </a>
-      <a href="{{ "/tickets" | relative_url }}" class="header__link">tickets</a>
-      <a href="{{ "/speakers" | relative_url }}" class="header__link">speakers</a>
+      <a
+        id="nav_link"
+        href="/#speakers"
+        class="header__link">speakers</a>
     </nav>
   </div>
 </header>

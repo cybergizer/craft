@@ -1,5 +1,6 @@
 @use "imports/variables.scss" as *;
 @use "~sass-mq/mq.scss";
+@use "typography.scss";
 
 // Reset
 * {
@@ -12,6 +13,12 @@
   vertical-align: baseline;
   box-sizing: border-box;
   border-radius: 0;
+}
+
+body::-webkit-scrollbar {
+  //TODO
+  width: 0rem;
+  height: 0rem;
 }
 
 html {
@@ -63,9 +70,6 @@ canvas {
 // Styles
 html {
   min-height: 100vh;
-  //font-family: "Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif,
-  //  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  // font-family: "Courier New";
   font-family: "Syne", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -83,15 +87,10 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #d9d9d9;
   color: #000;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  // background-color: black;
-  height: 100vh;
-  width: 100vw;
-  // overflow: hidden;
 }
 
 img {

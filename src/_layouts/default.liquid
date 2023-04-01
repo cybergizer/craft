@@ -1,18 +1,11 @@
 <!doctype html>
 <html prefix="og: http://ogp.me/ns#" lang="{% if page.lang == blank %}{{ site.metadata.lang }}{% else %}{{ page.lang }}{% endif %}">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
     {% render "head", site: site, metadata: site.metadata, page: page %}
   </head>
   <body class="{{ page.layout }} {{ page.page_class }}">
     {% render "navbar", site: site, page: page %}
-
-    <div class="content">
+    <div id="content">
       {{ content }}
     </div>
 
