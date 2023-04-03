@@ -51,3 +51,10 @@ All talks and speakers must adhere to the conference → <a href="{{ "/code" | r
 **Note:** for sessions with more than one speaker, the travel expenses budget is split among all speakers.
 
 💡**The CFP is open from the 1st of April to the 31th of May 2023**
+
+<div style="display: flex;align-items: center;flex-direction: column;">
+  <h1 style="text-align: center;">Ready to rock’n’roll?</h1>
+  <div style="background: #13BDAC;border-radius: 39px;padding: 20px 38px;">
+    <a style="font-weight: 600;font-size: 30px;line-height: 88.9%;text-align: center;letter-spacing: -0.06em;text-transform: uppercase;text-decoration: none;" href="https://www.papercall.io/eurukocfp" target="_blank">apply</a>
+  </div>
+</div> 
