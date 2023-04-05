@@ -3,16 +3,16 @@
     <div class="profile__background"></div>
     <div class="profile__image">
       <img
-        src="<%= webpack_path speaker.data.image %>"
-        alt="<%= "#{speaker.data.name} photo" %>"
+        src="<%= webpack_path community.data.image %>"
+        alt="<%= "#{community.data.name} photo" %>"
         loading="lazy"
       />
     </div>
-    <%- if speaker.data.category == "keynote" %>
+    <%- if community.data.category == "keynote" %>
       <div class="profile__keynote">
         KEYNOTE
       </div>
-    <%- elsif speaker.data.category == "mc" %>
+    <%- elsif community.data.category == "mc" %>
       <div class="profile__mc">
         <abbr title="Master of ceremonies">MC</abbr>
       </div>
@@ -20,15 +20,12 @@
   </div>
 
   <span class="profile__name">
-    <%= speaker.data.name %>
+    <%= community.data.name %>
   </span>
-  <%- if (talk = speaker.relations.talk).present? %>
-    <span class="profile__talk_title"><%= talk.data.title %></span>
-  <%- end %>
 <% end %>
 
 <div class="speakers__profile">
-  <%- url = url_for(speaker.relations.talk) if speaker.relations.talk.present? %>
+  <%- url = url_for(community.relations.talk) if community.relations.talk.present? %>
   <% if !url.blank? %>
     <a
       href="<%= url %>"
@@ -37,7 +34,7 @@
       <%= card_contents %>
     </a>
   <%- else %>
-    <div class="profile profile--{{speaker.data.category}}">
+    <div class="profile profile--{{community.data.category}}">
       <%= card_contents %>
     </div>
   <%- end %>

@@ -1,0 +1,34 @@
+<section id="speakers" class="section section--darkblue speakers">
+  <div class="section__container">
+    <div class="section__inner-container">
+      <h1
+        id="heading-speakers"
+        class="section__heading section__heading--teal"
+      >
+        Communities
+      </h1>
+      <div class="speakers__profiles">
+        <%- categories = %w(keynote mc) %>
+
+        <%- %w(keynote mc).each do |category| %>
+          <%- communities = collections.communities.resources.find_all { _1.published? && _1.data.category == category } %>
+          <%- communities.reverse! if category == "keynote" %>
+          <%- communities.each do |community| %>
+            <%= render "community", community: community %>
+          <%- end %>
+        <%- end %>
+      </div>
+      <div class="speakers__profiles">
+        <%- categories = %w(normal lightning cfp tba) %>
+
+        <%- %w(normal lightning cfp tba).each do |category| %>
+          <%- communities = collections.communities.resources.find_all { _1.published? && _1.data.category == category } %>
+          <%- communities.reverse! if category == "keynote" %>
+          <%- communities.each do |community| %>
+            <%= render "community", community: community %>
+          <%- end %>
+        <%- end %>
+      </div>
+    </div>
+  </div>
+</section>

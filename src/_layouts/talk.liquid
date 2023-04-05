@@ -3,64 +3,37 @@ layout: default
 ---
 {% render "sidekick", page: page, site: site %}
 
-<section id="info" class="section section--lightdarkblue">
-  <div class="section__container">
-    <div class="section__inner-container">
-      <div class="section__columns">
-        <div class="section__small-column">
-          <h1 id="heading-info" class="section__heading section__heading--pink">
-            {{ resource.data.start_time | date: "%A %H:%M" }}
-          </h1>
-          {% if resource.relations.sponsor %}
-            <p class="section__info section__travel">
-              Speaker travel arrangements covered by
-              <a href="{{resource.relations.sponsor.data.url}}">{{resource.relations.sponsor.data.name}}</a>
-            </p>
-          {% endif %}
-        </div>
-        <div class="section__large-column">
-          <div class="section__content">
-            {{ content }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{% if resource.relations.speaker %}
-  {% assign speaker = resource.relations.speaker %}
-  <section id="info" class="section section--darkblue">
+{% if resource.relations.community %}
+  {% assign community = resource.relations.community %}
+  <section id="info" class="section section--darkblue" style="background: white;">
     <div class="section__container">
       <div class="section__inner-container">
         <div class="section__columns">
           <div class="section__small-column">
             <h1 id="heading-info" class="section__heading section__heading--teal">
-              {{ speaker.name }}
+              {{ community.tagline }}
             </h1>
-            <p class="section__info">
-              {{ speaker.tagline }}
-            </p>
+            
           </div>
           <div class="section__large-column">
             <div class="section__content">
-              {{ speaker.bio | markdownify }}
+              {{ community.bio | markdownify }}
 
-              {% if speaker.url or speaker.github or speaker.twitter%}
+              {% if community.url or community.github or community.twitter%}
                 <p>
-                  {% if speaker.url %}
-                    <a href="{{speaker.url}}" class="section__cta section__cta--teal">
+                  {% if community.url %}
+                    <a href="{{community.url}}" class="section__cta section__cta--teal">
                       Website
                     </a>
                   {% endif %}
-                  {% if speaker.github %}
-                    <a href="{{speaker.github}}" class="section__cta section__cta--teal">
+                  {% if community.github %}
+                    <a href="{{community.github}}" class="section__cta section__cta--teal">
                       GitHub
                     </a>
                   {% endif %}
-                  {% if speaker.twitter %}
-                    <a href="{{speaker.twitter}}" class="section__cta section__cta--teal">
-                      Twitter
+                  {% if community.telegram %}
+                    <a href="{{community.telegram}}" class="section__cta section__cta--teal">
+                      telegram
                     </a>
                   {% endif %}
                 </p>
@@ -72,3 +45,50 @@ layout: default
     </div>
   </section>
 {% endif %}
+
+<section id="info" class="section section--lightdarkblue">
+  <div class="section__container">
+    <div class="section__inner-container">
+      <div class="section__columns">
+        <div class="section__small-column">
+          <h1 id="heading-info" class="section__heading section__heading--pink">
+            {{ resource.data.owner }}
+          </h1>
+          {% if resource.relations.sponsor %}
+            <p class="section__info section__travel">
+              Speaker travel arrangements covered by
+              <a href="{{resource.relations.sponsor.data.url}}">{{resource.relations.sponsor.data.name}}</a>
+            </p>
+          {% endif %}
+        </div>
+        <div class="section__large-column">
+          <div class="section__content">
+           <p class="section__info section__travel">
+              {{ resource.data.owner_description }}
+            </p>
+          {% if resource.data.owner_telegram or resource.data.owner_github or resource.data.owner_url %}
+                <p>
+                  {% if resource.data.owner_url %}
+                    <a href="{{resource.data.owner_url}}" class="section__cta section__cta--teal">
+                      Website
+                    </a>
+                  {% endif %}
+                  {% if resource.data.owner_github %}
+                    <a href="{{resource.data.owner_github}}" class="section__cta section__cta--teal">
+                      GitHub
+                    </a>
+                  {% endif %}
+                  {% if resource.data.owner_telegram %}
+                    <a href="{{resource.data.owner_telegram}}" class="section__cta section__cta--teal">
+                      telegram
+                    </a>
+                  {% endif %}
+                </p>
+              {% endif %}
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
