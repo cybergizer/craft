@@ -15,15 +15,21 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 
-url: "https://2023.euruko.org" # the base hostname & protocol for your site, e.g. https://example.com
+# PROD:
+# url: "https://2023.euruko.org" # the base hostname & protocol for your site, e.g. https://example.com
+# STAGE:
+url: "https://cybergizer.github.io"
 
 permalink: pretty
 
 content_engine: resource
 
 # Other options you might want to investigate:
+# PROD: 
+# base_path: "/" # the subpath of your site, e.g. /blog
+# STAGE:
+base_path: "/craft" # the subpath of your site, e.g. /blog
 
-base_path: "/" # the subpath of your site, e.g. /blog
 timezone: Europe/Vilnius
 # pagination:
 #   enabled: true
