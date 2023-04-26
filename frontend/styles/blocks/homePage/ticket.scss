@@ -1,0 +1,116 @@
+@use "imports/variables.scss" as *;
+@use "~sass-mq/mq.scss";
+
+.ticket-section {
+  position: relative;
+  padding: $header-height 0;
+  width: 100%;
+  min-height: 863px;
+  max-height: 3200px;
+  background: #000;
+
+  .content-container {
+    width: 95%;
+    height: 663px;
+    background: #d9d9d9;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .content-info {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 140px;
+      @include mq.mq($until: wide) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 90px;
+        gap: 50px;
+      }
+
+      @include mq.mq($until: tablet) {
+        margin-top: 170px;
+      }
+
+      &__header {
+        width: 45%;
+        margin: 0;
+        font-weight: 600;
+        font-size: 109.126px;
+        line-height: 90%;
+        text-align: center;
+        letter-spacing: -0.06em;
+        text-transform: uppercase;
+        color: #000;
+
+        @include mq.mq($until: wide) {
+          min-height: 0;
+          width: 100%;
+          font-size: 80px;
+        }
+
+        @include mq.mq($until: tablet) {
+          font-size: 47.223px;
+        }
+      }
+
+      &__descriptoin {
+        width: 40%;
+        margin: 0;
+        font-weight: 500;
+        font-size: 41.7563px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #000000;
+
+        @include mq.mq($until: wide) {
+          min-height: 0;
+          width: 90%;
+        }
+
+        @include mq.mq($until: tablet) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    background: #ff74bd;
+    box-shadow: 3.67404px 2.93923px 11.0221px rgba(0, 0, 0, 0.13);
+    border-radius: 47.4324px;
+    width: max-content;
+    padding: 23px 38px;
+
+    @include mq.mq($until: wide) {
+      margin-top: 50px;
+    }
+
+    @include mq.mq($until: desktop) {
+      padding: 20px 36px;
+      margin: 30px auto;
+    }
+
+    & > a {
+      font-weight: 600;
+      font-size: 49.8169px;
+      line-height: 88.9%;
+      text-align: center;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+      color: #000000;
+      text-decoration: none;
+      @include mq.mq($until: tablet) {
+        font-size: 20px;
+      }
+    }
+  }
+}
